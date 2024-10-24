@@ -15,8 +15,8 @@ namespace Timer
         [JsonProperty("partitionKey")]
         public string partitionKey { get; set; }
 
-        [JsonProperty("name")]
-        public int name { get; set; }
+        [JsonProperty("LastName")]
+        public string LastName { get; set; }
     }
 
     public class Player
@@ -56,15 +56,15 @@ namespace Timer
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
 
-            log.LogInformation(input.partitionKey);
+            log.LogInformation(input.LastName);
 
 
             playerDocument = new Player
             {
-                Id = "Dj Bonder",
+                Id = "qqqqq",
                 NickName = $"{DateTime.Now.ToLongDateString()} courtesy of slackmo",
-                PlayerId = 222,
-                Region = "out"
+                PlayerId = 333333,
+                Region = "eeeeeeeeeeee"
             };
         }
     }
